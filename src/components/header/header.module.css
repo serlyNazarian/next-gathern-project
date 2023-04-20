@@ -1,0 +1,33 @@
+.navRowWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navRowInnerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70% !important;
+    padding: 15px;
+}
+
+.navRowUl {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.headerLink {
+    color: #23234E;
+}
+
+.headerLink:hover {
+    color: var(--secondary-color);
+}
