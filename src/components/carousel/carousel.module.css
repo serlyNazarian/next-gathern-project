@@ -1,0 +1,12 @@
+.carouselWrapper {
+    display: flex !important;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+}
+
+.carouselImage {
+    width: 100%;
+    position: relative;
+    opacity: 0.1;
+}
