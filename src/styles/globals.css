@@ -1,10 +1,11 @@
 :root {
   --primary-color: #292953;
-  --secondary-color: #5A409B;
-  --third-color: #FBD110;
+  --secondary-color: #5a409b;
+  --third-color: #fbd110;
   --white-color: #fff;
   --black-color: #000;
   --gray-color: #787883;
+  --button-white: rgb(255, 255, 255);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,7 +51,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Tajawal Regular' !important;
+  font-family: "Tajawal Regular" !important;
 }
 
 /* body {

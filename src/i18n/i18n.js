@@ -13,7 +13,7 @@ i18n
       en: {
         translation: en,
       },
-      fr: {
+      ar: {
         translation: ar,
       },
     },

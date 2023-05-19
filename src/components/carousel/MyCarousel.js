@@ -77,7 +77,7 @@ const myData = [
 
 const MyCarousel = () => {
   return (
-    <Carousel autoplay className={styles.carouselWrapper}>
+    <Carousel autoplay draggable className={styles.carouselWrapper}>
       {myData?.map((item) => {
         const textDivClassName = `textDiv-${item.id}`;
         return (
@@ -88,21 +88,18 @@ const MyCarousel = () => {
               className={styles.carouselImage}
               src={item.imagePath}
               alt="product"
-              style={{ zIndex: -1 }}
             />
-            <div
-              className={`${styles.textDiv} ${textDivClassName}`}
-              style={{
-                position: "absolute",
-                zIndex: "1",
-                top: 100,
-                color: "red",
-              }}
-            >
+            <div className={`${styles.textDiv} ${textDivClassName}`}>
               {item.title ? <h3>{item.title}</h3> : null}
               <p>{item.text}</p>
-              {item.button && <Button>{item.buttonText}</Button>}
-              {item.imageSource && <span>{item.imageSource}</span>}
+              {item.button && (
+                <Button className={styles.button}>{item.buttonText}</Button>
+              )}
+              {item.imageSource && (
+                <span className={styles.imageSourceSpan}>
+                  {item.imageSource}
+                </span>
+              )}
             </div>
           </div>
         );

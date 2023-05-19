@@ -1,12 +1,49 @@
 .carouselWrapper {
-    display: flex !important;
-    justify-content: flex-start;
-    width: 100%;
-    align-items: center;
+  display: flex !important;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
 }
 
 .carouselImage {
-    width: 100%;
-    position: relative;
-    opacity: 0.1;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.textDiv {
+  color: var(--white-color);
+  position: absolute;
+  z-index: 1;
+  top: 150px;
+  padding-left: 25px;
+}
+
+.button {
+  color: var(--button-white);
+  border: 2px solid var(--button-white);
+  min-width: 304px;
+  height: 50px;
+  font-size: 16px;
+  margin-top: 30px;
+  background-color: transparent;
+  border-radius: 24px;
+  font-family: "Tajawal Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.button:hover {
+  color: var(--secondary-color) !important;
+  background-color: var(--button-white);
+  border: 2px solid var(--button-white) !important;
+  border-radius: 24px;
+}
+
+.imageSourceSpan {
+  /* background-color: red; */
+  position: absolute;
+  top: 170px;
+  left: 25px;
 }
