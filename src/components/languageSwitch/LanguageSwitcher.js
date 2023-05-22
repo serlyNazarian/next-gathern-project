@@ -13,7 +13,7 @@ const LanguageSwitcher = () => {
   return (
     <div>
       <div onClick={() => changeLanguage("en")}>English</div>
-      <div onClick={() => changeLanguage("ar")}>Arabic</div>
+      {/* <div onClick={() => changeLanguage("ar")}>Arabic</div> */}
     </div>
   );
 };
