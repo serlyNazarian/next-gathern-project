@@ -1,0 +1,46 @@
+.citiesWrapper {
+    text-align: center;
+    /* width: 100%; */
+    padding: 20px;
+    margin-top: 110px;
+}
+
+.carouselWrapper {
+    display: flex !important;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+}
+
+.linkSection {
+    margin-top: 50px;
+}
+
+.linkItem {
+    color: var(--text-color);
+    font-size: 17px;
+    font-family: "Tajawal Bold";
+}
+
+.linkItem:hover {
+    text-decoration: underline;
+}
+
+.NextLink:hover {
+    color: var(--text-color);
+}
+
+.textDiv {
+    margin-bottom: 20px;
+}
+
+.paragraphDiv {
+    color: var(--black-color);
+    font-size: 18px;
+}
+
+.HeaderText {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 32px;
+}

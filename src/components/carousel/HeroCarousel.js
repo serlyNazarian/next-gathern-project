@@ -106,6 +106,7 @@ const HeroCarousel = () => {
       draggable
       className={styles.carouselWrapper}
       renderItem={renderItem}
+      arrows={false}
     />
   );
 };

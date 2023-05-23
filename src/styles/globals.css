@@ -6,6 +6,7 @@
   --black-color: #000;
   --gray-color: #787883;
   --button-white: rgb(255, 255, 255);
+  --text-color: #050536,
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,7 @@
+.carouselWrapper {
+  display: flex !important;
+  justify-content: flex-start;
+  width: 700px;
+  align-items: center;
+  padding: 10px;
+}

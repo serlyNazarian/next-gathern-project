@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styles from "./button.module.css";
 import { useTranslation } from "react-i18next";
 import { UserOutlined, DownOutlined } from "@ant-design/icons";
-import { Button, Form, Input, Modal } from "antd";
+import { Button, Card, Form, Input, Modal, Space } from "antd";
+import MyCarousel from "../carousel/MyCarousel";
 
 const LoginButton = (props) => {
   const { t } = useTranslation();
@@ -26,6 +27,94 @@ const LoginButton = (props) => {
     console.log("Received values of form: ", values);
   };
 
+  const myData = [
+    {
+      id: 1,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 2,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 3,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 4,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 5,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 6,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 7,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 8,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 9,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 10,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 11,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 12,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 13,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 14,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 15,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 16,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 17,
+      image: "/images/dammam.png",
+    },
+    {
+      id: 18,
+      image: "/images/dammam.png",
+    },
+  ];
+
+  const renderItem = (item) => (
+    <>
+      <Card
+        style={{
+          width: 270,
+        }}
+        cover={<img alt="example" src={item.image} />}
+      >
+        {/* <Meta title={"test"} /> */}
+      </Card>
+    </>
+  );
+
   return (
     <>
       <Button
@@ -43,36 +132,53 @@ const LoginButton = (props) => {
         onCancel={handleCancel}
         footer={null}
         centered
-        width={1000}
+        width={840}
+        bodyStyle={{ height: "450px" }}
       >
-        <Form form={form} name="register" onFinish={onFinish}>
-          <span>{t("WORD_ENTER_NUM_LOGIN")}</span>
-          <Form.Item
-            name="phone"
-            label="Phone Number"
-            rules={[
-              {
-                required: true,
-                message: "Please input your phone number!",
-              },
-            ]}
+        <Space>
+          <Form
+            form={form}
+            name="register"
+            onFinish={onFinish}
+            style={{ width: "70%" }}
           >
-            <Input
-              style={{
-                width: "100%",
-              }}
-            />
-          </Form.Item>
-          <Form.Item>
-            <Button type="primary" htmlType="submit">
-              Continue
-            </Button>
-          </Form.Item>
-          <span>
-            We will send a message to the entered number containing a code to
-            continue. Make sure you enter your number correctly.
-          </span>
-        </Form>
+            <span>{t("WORD_ENTER_NUM_LOGIN")}</span>
+            <Form.Item
+              name="phone"
+              label="Phone Number"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your phone number!",
+                },
+              ]}
+            >
+              <Input
+                style={{
+                  width: "100%",
+                }}
+              />
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit">
+                Continue
+              </Button>
+            </Form.Item>
+            <span>
+              We will send a message to the entered number containing a code to
+              continue. Make sure you enter your number correctly.
+            </span>
+          </Form>
+          <MyCarousel
+            items={myData}
+            autoplay={false}
+            draggable
+            className={styles.carouselWrapper}
+            renderItem={renderItem}
+            infinite={false}
+            arrows={false}
+          />
+        </Space>
       </Modal>
     </>
   );

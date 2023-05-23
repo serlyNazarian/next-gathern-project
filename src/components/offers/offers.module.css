@@ -1,0 +1,23 @@
+.offerSectionWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--secondary-color);
+  height: 440px;
+  color: var(--white-color);
+}
+
+.carouselWrapper {
+  display: flex !important;
+  justify-content: flex-start;
+  width: 200px;
+  align-items: center;
+  padding: 10px;
+}
+
+.middleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
