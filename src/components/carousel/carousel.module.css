@@ -19,6 +19,10 @@
   padding-left: 25px;
 }
 
+.titleDiv {
+  color: var(--white-color) !important;
+}
+
 .button {
   color: var(--button-white);
   border: 2px solid var(--button-white);

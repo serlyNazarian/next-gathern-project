@@ -1,13 +1,9 @@
 .loginButton {
-    background-color: var(--secondary-color);
-    border-radius: 20px;
     text-transform: uppercase;
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
     height: 35px;
     width: 205px;
-    cursor: pointer;
     border: 1px solid var(--secondary-color);
-    color: var(--white-color);
     font-family: 'Tajawal Bold' !important;
 }
 

@@ -2,6 +2,7 @@ import { Button } from "antd";
 import styles from "./carousel.module.css";
 import Image from "next/image";
 import MyCarousel from "./MyCarousel";
+import MyTitle from "../typography/MyTitle";
 
 const myData = [
   {
@@ -86,7 +87,11 @@ const renderItem = (item) => (
       alt="product"
     />
     <div className={`${styles.textDiv} textDiv${item.id}`}>
-      {item.title ? <h3>{item.title}</h3> : null}
+      {item.title ? (
+        <MyTitle className={styles.titleDiv} level={3}>
+          {item.title}
+        </MyTitle>
+      ) : null}
       <p>{item.text}</p>
       {item.button && (
         <Button className={styles.button}>{item.buttonText}</Button>

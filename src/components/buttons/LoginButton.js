@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { UserOutlined, DownOutlined } from "@ant-design/icons";
 import { Button, Card, Form, Input, Modal, Space } from "antd";
 import MyCarousel from "../carousel/MyCarousel";
+import Image from "next/image";
 
 const LoginButton = (props) => {
   const { t } = useTranslation();
@@ -108,7 +109,7 @@ const LoginButton = (props) => {
         style={{
           width: 270,
         }}
-        cover={<img alt="example" src={item.image} />}
+        cover={<Image alt="example" src={item.image} />}
       >
         {/* <Meta title={"test"} /> */}
       </Card>
@@ -118,6 +119,8 @@ const LoginButton = (props) => {
   return (
     <>
       <Button
+        type="primary"
+        size="large"
         onClick={showModal}
         icon=<UserOutlined />
         className={styles.loginButton}

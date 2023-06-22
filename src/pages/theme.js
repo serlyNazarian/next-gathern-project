@@ -1,0 +1,9 @@
+export const primaryColor = "#292953";
+export const secondaryColor = "#5a409b";
+export const thirdColor = "#fbd110";
+export const whiteColor = "#fff";
+export const blackColor = "#000";
+export const grayColor = "#787883";
+export const buttonWhite = "rgb(255, 255, 255)";
+export const textColor = "#050536";
+export const borderRadius = "20px";

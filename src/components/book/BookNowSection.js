@@ -2,6 +2,8 @@ import { Button, Card, Space } from "antd";
 import React from "react";
 import MyCarousel from "../carousel/MyCarousel";
 import styles from "./book.module.css";
+import MyTitle from "../typography/MyTitle";
+import Image from "next/image";
 
 const { Meta } = Card;
 
@@ -27,8 +29,12 @@ const renderItem = (item) => (
         width: 570,
         marginBottom: 15,
       }}
-      cover={<img alt="example" src={item.image} />}
-      actions={[<Button onClick={() => console.log("test")}>Book Now</Button>]}
+      cover={<Image alt="example" src={item.image} width={200} height={250} />}
+      actions={[
+        <Button key={item.id} onClick={() => console.log("test")}>
+          Book Now
+        </Button>,
+      ]}
     >
       <Meta title={"test"} />
     </Card>
@@ -39,7 +45,7 @@ const BookNowSection = () => {
   return (
     <Space>
       <div>
-        <h3>Book Your Second Home</h3>
+        <MyTitle level={3}>Book Your Second Home</MyTitle>
         <div>
           <span>
             Wherever your destination is, you will find your second home in

@@ -3,6 +3,8 @@ import MyCarousel from "../carousel/MyCarousel";
 import { Card, List } from "antd";
 import styles from "./cities.module.css";
 import Link from "next/link";
+import MyTitle from "../typography/MyTitle";
+import Image from "next/image";
 
 const { Meta } = Card;
 
@@ -138,7 +140,7 @@ const renderItem = (item) => (
       style={{
         width: 270,
       }}
-      cover={<img alt="example" src={item.image} />}
+      cover={<Image width={100} height={100} alt="example" src={item.image} />}
     >
       <Meta title={item.name} description={item.amount} />
     </Card>
@@ -149,10 +151,10 @@ const CitiesSection = () => {
   return (
     <div className={styles.citiesWrapper}>
       <div className={styles.textDiv}>
-        <h3 className={styles.HeaderText}>
+        <MyTitle level={3} className={styles.HeaderText}>
           More than 61,000 properties in more than 216 cities and provinces
           around Saudi Arabia
-        </h3>
+        </MyTitle>
         <p className={styles.paragraphDiv}>
           From the West to the East, from the North to the South, explore the
           beauty of Saudi Arabia with the best properties in the world
